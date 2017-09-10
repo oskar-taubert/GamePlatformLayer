@@ -9,12 +9,13 @@
  *
  *  Creation Date : Thu 10 Aug 2017 06:09:18 PM CEST
  *
- *  Last Modified : Fri 18 Aug 2017 08:51:12 PM CEST
+ *  Last Modified : Sun 10 Sep 2017 09:30:06 AM CEST
  *
  * *************************************/
 
 #include <X11/Xlib.h>
 #include <GL/glx.h>
+#include <alsa/asoundlib.h>
 
 int main()
 {
@@ -49,7 +50,7 @@ int main()
                     0, 0, // position
                     600, 600, // width, height
                     0, // border width
-                    visualInfo->depth, // 
+                    visualInfo->depth, //
                     InputOutput, // window type
                     visualInfo->visual,
                     CWColormap | CWEventMask, // flags which attributes in XSetWindowAttributes should be used
